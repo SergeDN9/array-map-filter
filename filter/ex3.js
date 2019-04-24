@@ -24,6 +24,10 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
+  const starkArr = names.filter(name =>
+    name.slice(-5) === 'Stark');
+    // name.substring(name.length, name.length - 5) === 'Stark');
+    return starkArr;
 }
 
 // Ne pas modifier l'export
