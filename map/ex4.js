@@ -52,7 +52,19 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 function getCirclesProperties(radiuses) {
-}
+  const arr = radiuses.map (
+    function(rayon) {
+    let obj = {
+      radius: rayon,
+      circumference: 2 * Math.PI * rayon,
+      surface: Math.PI * rayon * rayon
+    }
+    obj.circumference = obj.circumference.toFixed(3)
+    obj.surface = obj.surface.toFixed(3)
+    return obj;
+  });
+  return arr;
+};
 
 
 

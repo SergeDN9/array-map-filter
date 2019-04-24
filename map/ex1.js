@@ -22,7 +22,7 @@ En sortie: [
  */
 
 function getStringsLength(strings) {
-    return strings.map(function (item) {
+    return strings.map(function(item) {
       return (`${item} contains ${item.length} characters`)
   })
 };
