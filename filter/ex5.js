@@ -13,7 +13,7 @@ casse), c'est-à-dire qu'une recherche sur 'star' ne doit pas éliminer les cha�
 'Star'.
 
 Exemple d'entrée:
-  
+
 1. tableau de chaînes
   [
     'Mad Max: Fury Road',
@@ -39,7 +39,10 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
-}
+  const filterMovie = items.filter(item =>
+    item.toLowerCase().includes(search));
+  return filterMovie;
+};
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

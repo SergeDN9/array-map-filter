@@ -26,8 +26,16 @@ Sortie attendue:
 
 */
 
+//creer une boucle pour lire toutes les elements de bannedWords sd
+
 function filterOffensiveComments(comments, bannedWords) {
-}
+  const result = comments.filter(comment => {
+    return !bannedWords.filter(word => {
+      return comment.toLowerCase().includes(word);
+    }).length;
+  });
+  return result;
+};
 
 // Ne pas modifier l'export
 module.exports = filterOffensiveComments;

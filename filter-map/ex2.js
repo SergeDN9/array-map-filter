@@ -22,9 +22,38 @@ Tableau en entrée:
 Sortie attendue:
 ['Bordeaux', 'Lille', 'Marseille', 'Reims', 'Toulouse']
 
+function getCampusesTeachingReact(campuses) {
+  const cursusReact = campuses
+  .filter(campus => {
+  return campus.curriculums[0] == 'JS/React' ||
+  campus.curriculums[1] == 'JS/React';
+  })
+  .map(ville => {
+  return ville.city;
+  })
+  return cursusReact;
+};
+
+bizzarerie
+==========
+return campus.curriculums[0] || campus.curriculums[1] == 'JS/React';
+renvoie toutes les villes alors que
+
+return campus.curriculums[0] == 'JS/React' ||
+campus.curriculums[1] == 'JS/React';
+renvoie uniquement les villes avec curriculums[0] ou [1] contenant JS/React
 */
 
 function getCampusesTeachingReact(campuses) {
-}
+  const cursusReact = campuses
+  .filter(campus => {
+  return campus.curriculums[0] == 'JS/React' ||
+  campus.curriculums[1] == 'JS/React';
+  })
+  .map(ville => {
+  return ville.city;
+  })
+  return cursusReact;
+};
 
 module.exports = getCampusesTeachingReact;
